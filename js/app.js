@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!calendar) return; // evita erro se não tiver calendar
 
-    const totalDays = 60; // ou quantos dias quiser
+    const totalDays = 140; // ou quantos dias quiser
     for (let i = 0; i < totalDays; i++) {
       const day = document.createElement('div');
       day.classList.add('day');
