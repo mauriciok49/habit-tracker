@@ -4,150 +4,152 @@
     box-sizing: border-box;
 }
 
+html, body, main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 
 .header {
     display: flex;
+    align-items: center;
     justify-content: center;
     width: 100%;
-    height: 10vh;
+    height: 10%;
     border: 1px solid black;
 }
+
 .MenuOptions {
-    border: 1px solid red;
-    width: 50%;
+    border: 1px solid yellowgreen;
     height: 100%;
-}
-
-.logo {
-    border: 1px solid;
-    width: 100%;
-}
-
-.SideBar {
-    width: 100%;
-    border: 1px solid teal;
-
+    width: 60%;
 }
 
 h1 {
-    border: 1px solid black;
     width: 100%;
-    height: 5vh;
+    height: 5%;
 }
 
 .ContainerMain {
-    width: 100%;
-    height: 80vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
-    justify-items: center;
-    border: 1px solid rgb(157, 196, 18);
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    border: 1px solid red;
 }
 
 .FirstContainer {
-    display: grid;
-    padding: 10px;
-    gap: 10px;
-    grid-template-columns: repeat(1, 1fr);
-    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
     height: 98%;
-    border: 1px solid purple;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.288);
 }
 
 .IndividualsHabits {
-    border: 1px solid rgb(0, 0, 0);
-    margin: 12px;
-    
-
-    
-}
-
-.HabitCalendar {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15px, 1fr));
-    justify-items: center;
-    align-items: center;
-    height: 60%;
-    gap: 2px;
-    max-width: 100%;
-    overflow: hidden;
-    margin: 10px;
-    border: 1px solid rgb(255, 0, 0);
-    margin-top: 10px; 
-    grid-auto-rows: 10px
-       /* vertical */
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    height: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.288);
 }
 
 h3 {
-    width: 100%;
     height: 20%;
-    border: 1px solid black;
+    border-radius: 10px 10px 0px 0px;
 }
 
-.HabitCalendar .day {
-    align-items: center;
-    width: 17px;
-    height: 17px;
-    background-color: #eee;
-    border-radius: 3px;
-}
-
-
-.SecondContainer {
+.HabitCalendar {
     display: flex;
-    flex-wrap: nowrap;
-    height: 98%;
-    padding: 10px;
-    gap: 10px;
-    width: 80%;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    border: 1px solid purple;
-}
-
-.HabitStatistics {
+    justify-content: center;
     width: 100%;
-    height: 50%;
-    border: 1px solid black;
-}
-
-.MotivationSection {
-    height: 50%;
-    width: 100%;
-    border: 1px solid green;
-}
-.ThirdContainer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    padding: 10px;
-    gap: 10px;
-    height: 98%;
-    border: 1px solid rgb(224, 74, 54);
+    height: 80%;
+    border-radius: 0px 0px 10px 10px;
+    
+    
 }
 
 .calendar {
-    display: flex;
-    width: 100%;
-    height: 50%;
-    border: 1px solid;
+    width: 95%;
+    height: 90%;
+    --day-size: 16px;
+    --gap: 4px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(7, 1fr); 
+    gap: var(--gap);
+    align-items: start;
+    overflow-x: auto;
 }
 
-.notes {
-    display: flex;
-    width: 100%;
-    height: 50%;
-    border: 1px solid;
+.calendar::-webkit-scrollbar {
+  display: none;
 }
 
+.calendar .day {
+  width: var(--day-size);
+  height: var(--day-size);
+  border-radius: 3px;
+  background: #ebedf0; /* cor padrão (GitHub-like) */
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.02);
+  cursor: pointer;
+}
 
+.day.completed {
+  background: #4caf50;
+}
 
+.SecondContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 98%;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.288);
+}
+
+.HabitStatistics {
+    width: 95%;
+    height: 50%;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;   
+    flex-direction: column;        /* habilita flexbox */
+    justify-content: space-between;/* centraliza horizontalmente */
+}
+
+.estatisticstitle {
+    border: 1px solid #4caf50;
+    height: 20%;
+    justify-self: start;
+}
+
+#habitChart {
+    width: 10%;
+    
+}
+
+.MotivationSection {
+    width: 95%;
+    height: 45%;
+    border: 1px solid sandybrown;
+    border-radius: 10px;
+}
 
 .footer {
-    width: 100%;
-    height: 5vh;
-    border: 1px solid green;
+    height: 5%;
+    background-color: aqua;
+    border: 1px solid;
 }
